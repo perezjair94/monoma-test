@@ -14,10 +14,6 @@ pnpm dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This project you need credentials what are they, email [`jair@mail.com`] and password [`monoma123`]
-
-## Learn More
-
 This project needs the following credentiales:
 
 - Email: jair@mail.com.
