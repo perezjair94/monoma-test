@@ -1,10 +1,8 @@
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import { getPokemon } from "@/services/pokemon.service";
 import Layout from "@/components/Layout";
 import PokemonDescription from "@/components/PokemonInfo";
-import { getPokemon } from "@/services/pokemon.service";
-import { logout } from "@/utils/auth";
-import Head from "next/head";
-import { useRouter } from "next/router";
-import { useEffect, useState } from "react";
 
 export default function PokemonPage() {
   const router = useRouter();
