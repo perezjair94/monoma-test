@@ -10,7 +10,7 @@ export default function PokemonCard({ name, index, offset }) {
       <div className="bg-white rounded-lg shadow-sm">
         <div>
           <img
-            className="h-60 w-full p-4 object-cover"
+            className="h-76 lg:h-60 w-full p-4 object-cover"
             src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/home/${
               index + 1 + offset
             }.png`}
