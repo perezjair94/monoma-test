@@ -1,4 +1,10 @@
 import Link from "next/link";
+import tw, { styled } from "twin.macro";
+
+const Container = styled.div(({}) => [tw`bg-white rounded-lg shadow-sm`]);
+const Title = styled.h2(({}) => [
+  tw`p-4 text-teal-800 font-semibold text-lg capitalize`,
+]);
 
 export default function PokemonCard({ name, index, offset }) {
   return (
@@ -7,7 +13,7 @@ export default function PokemonCard({ name, index, offset }) {
       href="/pokemon/[pokemonId]"
       as={`/pokemon/${index + 1 + offset}`}
     >
-      <div className="bg-white rounded-lg shadow-sm">
+      <Container>
         <div>
           <img
             className="h-76 lg:h-60 w-full p-4 object-cover"
@@ -16,10 +22,8 @@ export default function PokemonCard({ name, index, offset }) {
             }.png`}
           />
         </div>
-        <div className="p-4 text-teal-800 font-semibold text-lg capitalize">
-          {name}
-        </div>
-      </div>
+        <Title>{name}</Title>
+      </Container>
     </Link>
   );
 }

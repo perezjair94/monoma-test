@@ -1,3 +1,8 @@
+import tw, { styled } from "twin.macro";
+
+const InfoBox = styled.div(() => [tw`mb-4 bg-white px-6 p-4 rounded-md`]);
+const InfoTitle = styled.h3(() => [tw`text-xl font-semibold`]);
+
 export default function PokemonDescription({
   sprites,
   weight,
@@ -15,29 +20,29 @@ export default function PokemonDescription({
         />
       </div>
       <div>
-        <div className="mb-4 bg-white px-6 p-4 rounded-md">
-          <h3 className="text-xl font-semibold">Size</h3>
+        <InfoBox>
+          <InfoTitle>Size</InfoTitle>
           <p>Weight: {weight}</p>
           <p>height: {height}</p>
-        </div>
-        <div className="mb-4 bg-white px-6 p-4 rounded-md">
-          <h3 className="text-xl font-semibold">Abilities</h3>
+        </InfoBox>
+        <InfoBox>
+          <InfoTitle>Abilities</InfoTitle>
           {abilities.map((ability) => (
             <div key={ability.slot}>
               <p>Solt: {ability.slot}</p>
               <p className="capitalize">Name: {ability.ability.name}</p>
             </div>
           ))}
-        </div>
-        <div className="bg-white px-6 p-4 rounded-md">
-          <h3 className="text-xl font-semibold">Tipos</h3>
+        </InfoBox>
+        <InfoBox>
+          <InfoTitle>Tipos</InfoTitle>
           {types.map((type) => (
             <div key={type.slot}>
               <p>Solt: {type.slot}</p>
               <p className="capitalize">Name: {type.type.name}</p>
             </div>
           ))}
-        </div>
+        </InfoBox>
       </div>
     </div>
   );
