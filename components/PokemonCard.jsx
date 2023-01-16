@@ -17,7 +17,7 @@ export default function PokemonCard({ name, index, offset }) {
             }.png`}
           />
           <FooterCover>
-            <span className="font-semibold">May 20th 2020</span>
+            <span className="font-semibold text-gray-700">May 20th 2020</span>
             <SizeButton>Size</SizeButton>
           </FooterCover>
         </Cover>
