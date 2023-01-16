@@ -1,7 +1,9 @@
 import Link from "next/link";
 import tw, { styled } from "twin.macro";
+import format from "date-fns/format";
 
 export default function PokemonCard({ name, index, offset }) {
+  const today = format(new Date(), "MMM Do yyyy");
   return (
     <Link
       key={name}
@@ -17,7 +19,7 @@ export default function PokemonCard({ name, index, offset }) {
             }.png`}
           />
           <FooterCover>
-            <span className="font-semibold text-gray-700">May 20th 2020</span>
+            <span className="font-semibold text-gray-700">{today}</span>
             <SizeButton>Size</SizeButton>
           </FooterCover>
         </Cover>
