@@ -1,7 +1,16 @@
 import tw, { styled } from "twin.macro";
 
-const InfoBox = styled.div(() => [tw`mb-4 bg-white px-6 p-4 rounded-md`]);
-const InfoTitle = styled.h3(() => [tw`text-xl font-semibold`]);
+const Container = styled.div`
+  ${tw`grid grid-cols-1 lg:grid-cols-2 gap-6 mt-4`}
+`;
+
+const InfoBox = styled.div`
+  ${tw`mb-4 bg-white px-6 p-4 rounded-md`}
+`;
+
+const InfoTitle = styled.h3`
+  ${tw`text-xl font-semibold`}
+`;
 
 export default function PokemonDescription({
   sprites,
@@ -11,7 +20,7 @@ export default function PokemonDescription({
   abilities,
 }) {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-4">
+    <Container>
       <div>
         <img
           src={sprites.other.dream_world.front_default}
@@ -44,6 +53,6 @@ export default function PokemonDescription({
           ))}
         </InfoBox>
       </div>
-    </div>
+    </Container>
   );
 }
