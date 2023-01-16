@@ -4,6 +4,11 @@ const Container = styled.div`
   ${tw`grid grid-cols-1 lg:grid-cols-2 gap-6 mt-4`}
 `;
 
+const Cover = styled.img(() => [
+  tw`bg-[#f0e5c7] rounded-md `,
+  tw`p-4 w-full h-80`,
+]);
+
 const InfoBox = styled.div`
   ${tw`mb-4 bg-white px-6 p-4 rounded-md`}
 `;
@@ -21,13 +26,7 @@ export default function PokemonDescription({
 }) {
   return (
     <Container>
-      <div>
-        <img
-          src={sprites.other.dream_world.front_default}
-          className="bg-white p-4 rounded-md w-full h-80"
-          alt=""
-        />
-      </div>
+      <Cover src={sprites.other.dream_world.front_default} alt="" />
       <div>
         <InfoBox>
           <InfoTitle>Size</InfoTitle>
