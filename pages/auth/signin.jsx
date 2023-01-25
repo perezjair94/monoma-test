@@ -53,6 +53,7 @@ function SignInPage() {
                   autoComplete="none"
                   type="email"
                   name="email"
+                  value="jair@mail.com"
                   required
                 />
               </div>
@@ -64,6 +65,7 @@ function SignInPage() {
                     autoComplete="none"
                     type={typeInputPassword}
                     name="password"
+                    value="monoma123"
                     required
                   />
                   <ChangePasswordButton
