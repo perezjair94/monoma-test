@@ -10,7 +10,7 @@ export default function DropdownMenu() {
   }, []);
   return (
     !!user && (
-      <div className="dropdown inline-block relative">
+      <div className="dropdown inline-block relative z-50">
         <button className="hover:bg-gray-100 text-gray-700 font-semibold px-4 rounded inline-flex items-center">
           <span className="mr-1">{user.email}</span>
           <svg
